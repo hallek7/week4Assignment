@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+#box{
+width: 200px;
+height: 200px;
+background: rgb(231, 38, 4);
+margin: 20px auto;
+text-align: center;
+}
+button {
+margin-right: 10px;
+margin-left: 50em;
+float: center;
+}
+</style>
+<body>
+</head>
+<!--a events in Js are action that took place on  the page, mouse clicks,  hover submit , or key
+being pressed --> 
+
+<div id="box"> <h3 > Hover Over This Box</h3> </div>
+
+<button>Change Page Color</button>
+
+<script>
+/**** 1st  exampele we've a function with an event lister to react to a mouse 
+hover over ab ox . It listens to the event/hover "e"  and  alerts the user with a message. ***/
+const onbox = document.getElementById('box');
+function handlBox(e){
+alert("And You Hovered !");
+}
+onbox.addEventListener("mouseover", handlBox);
+
+/*** 2nd example we want random color to display everytime on mouse clickk
+we  querys the button, create a funtion ****/
+
+const bttn = document.querySelector('button');
+function randomColor (color){ 
+//  1st funtion will  gerenrated  random numbers/colors using math.random method and 
+// math.floor will to take that random number, and round it down to the nearest smaller digit
+return Math.floor(Math.random()*(color + 1));
+console.log("Test");
+}
+
+function changeColor(){
+// This 2nd funtion will call the randomColor funtion and assign the rgb colors to it 
+const rgbColors= 'rgb(' + randomColor(255) +  ',' + randomColor(255) +  
+',' + randomColor(255) + ')';
+        document.body.style.backgroundColor = rgbColors;
+}
+bttn.onclick = changeColor;
+</script>
+
+
+</body>
+</html>

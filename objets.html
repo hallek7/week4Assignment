@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<p id="car"> </p>
+<p id="person"> </p>
+<!--In js almost everything is an object 
+
+- Data types like boolen, string, dates are objects. Even funtions are objects.
+
+- Items, things , animals, and people are objects that have  property, behaviors, 
+attributes and methods(actions)
+
+A person can have a attributes like name, age, phone #, job title, etc --> 
+<script>
+var person  = {
+firstName : 'Lisa',
+lastName : ' James',
+phone: '333-555-8884',
+age: '100',
+sound : "Speak"
+}
+//if an object is an item like a car ,it'll have make, model ,year  action, etc :
+var car = {
+make: 'Toyota',
+model: 'Corolla',
+year : '2020',
+color: 'Green',
+action : "Drive"
+}
+// To access and display a propery/attribute  of an object , we could use a dot noation between the obj's name and it's property/attribute
+
+//create function to display the person info using 'this'  keyword which refers to the obj itself 
+person.info = function(){
+return "Person Information: " + this.firstName + " , " + this.lastName  + " ," + this.phone + 
+" , " + this.age + " " + this.sound;
+};
+
+//Create function to display the car info using 'this' keyword which refers to the obj itself 
+car.info = function(){
+return  "Car Information:"  + this.make + ", " + this.model  + " ," + this.year + " ," + 
+    this.color + " ," + this.action;
+};
+// get  p tag  from DOM/HTML to display the car info on the screen 
+document.getElementById('car').innerHTML = car.info();
+// get  p tag  from DOM/HTMLto display the car info on the screen 
+document.getElementById('person').innerHTML = person.info(); 
+</script> 
+
+</body>
+</html>
+
+
+
+
