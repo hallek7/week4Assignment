@@ -5,17 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<button onclick ="promptUser()">Login</button>
-<p id="message"></p>
+
+<p id="thanks"></p>
+<p id= "error"> </p>
 <script> 
 
 var userName = prompt("Enter Username");
 var passWord = prompt("Enter Password");
-
+// when the page loads, user will be prompted to enter username and password
 function promptUser() {
 }
 if (userName && passWord!=null) {
- document.getElementById("message").innerHTML= " Thank you " + userName;
+ document.getElementById("thanks").innerHTML= " Thank you " + userName;
+}
+else {
+     document.getElementById("error").innerHTML= " Who Are You? ";
 }
 </script> 
 
